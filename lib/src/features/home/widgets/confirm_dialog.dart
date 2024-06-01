@@ -14,6 +14,7 @@ class ConfirmDialog extends StatelessWidget {
             height: 30,
           ),
           TweenAnimationBuilder<double>(
+            onEnd: () => Navigator.of(context).pop(true),
             tween: Tween(
               begin: 0,
               end: 5,
@@ -47,7 +48,7 @@ class ConfirmDialog extends StatelessWidget {
       actions: [
         ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pop();
+              Navigator.of(context).pop(false);
             },
             child: const Text('Cancelar'))
       ],

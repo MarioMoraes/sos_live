@@ -31,12 +31,13 @@ class _SosButtonState extends State<SosButton> with TickerProviderStateMixin {
         height: 150,
         width: 150,
         child: RawMaterialButton(
-          onPressed: () {
-            showDialog(
+          onPressed: () async {
+            final response = await showDialog(
               context: context,
               builder: (context) => const ConfirmDialog(),
               barrierDismissible: false,
             );
+            print(response);
           },
           shape: const CircleBorder(),
           fillColor: Colors.red,

@@ -15,6 +15,6 @@ class HomeModule extends FlutterGetItModule {
 
   @override
   Map<String, WidgetBuilder> get pages => {
-        '/': (context) => const HomePage(),
+        '/': (context) => HomePage(controller: Injector.get()),
       };
 }

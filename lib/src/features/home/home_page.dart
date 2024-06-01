@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_sos/src/features/home/widgets/alarm_button.dart';
+import 'package:projeto_sos/src/features/home/widgets/map_button.dart';
 import 'package:projeto_sos/src/features/home/widgets/sos_button.dart';
+import 'package:projeto_sos/src/features/home/widgets/torch_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,12 +15,13 @@ class HomePage extends StatelessWidget {
       ),
       body: const Column(
         children: [
-          SosButton(),
+          Expanded(child: SosButton()),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('BOTAO 2'),
-              Text('BOTAO 3'),
-              Text('BOTAO 4'),
+              AlarmButton(),
+              TorchButton(),
+              MapButton(),
             ],
           )
         ],

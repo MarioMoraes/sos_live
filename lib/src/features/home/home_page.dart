@@ -16,10 +16,10 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(''),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Expanded(child: SosButton()),
-          Row(
+          Expanded(child: SosButton(controller: controller)),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AlarmButton(),

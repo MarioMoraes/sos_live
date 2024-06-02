@@ -5,4 +5,12 @@ part 'sos_state.dart';
 
 class SosCubit extends Cubit<SosState> {
   SosCubit() : super(SosInitial());
+
+  void acionaSos() {
+    emit(DistressOnState());
+  }
+
+  void desligaSos() {
+    emit(DistressOffState());
+  }
 }

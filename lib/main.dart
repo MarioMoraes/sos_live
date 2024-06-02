@@ -4,6 +4,8 @@ import 'package:flutter_getit/flutter_getit.dart';
 import 'package:projeto_sos/src/features/home/home_module.dart';
 import 'package:projeto_sos/src/features/splash/splash_module.dart';
 
+import 'src/core/bindings/application_binding.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterGetIt(
+      bindings: ApplicationBinding(),
       modules: [
         SplashModule(),
         HomeModule(),

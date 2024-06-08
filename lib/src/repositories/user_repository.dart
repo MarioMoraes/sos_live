@@ -1,5 +1,7 @@
+import 'package:projeto_sos/src/data/models/user_model.dart';
+
 abstract interface class UserRepository {
-  Future<void> login();
-  Future<void> me({String sessionToken});
-  Future<void> update({required Object user});
+  Future<UserModel?> login();
+  Future<UserModel?> me({required String sessionToken});
+  Future<UserModel?> update({required Object user});
 }
